@@ -7,14 +7,19 @@ import java.awt.Rectangle;
 import javax.swing.JPanel;
 
 public class dunno extends JPanel implements Runnable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public Rectangle floor;
 	
-	public int floorh= 20;
+	public int floorheight= 40;
 	public int fps = 1000;
 	public boolean objectDefine = false;
 	public Thread game;
 	public dunno(Display f){
-		setBackground (Color.blue);
+		setBackground (Color.cyan);
 		
 		defineObjects();
 		
@@ -22,7 +27,7 @@ public class dunno extends JPanel implements Runnable{
 		game.start();
 	}
 	void defineObjects() { 
-		floor = new Rectangle (-10, FirstImportantClass.h-floorh , FirstImportantClass.w+10, floorh);
+		floor = new Rectangle (-10, FirstImportantClass.height-floorheight, FirstImportantClass.width+10, floorheight);
 		
 		objectDefine = true;
 		
@@ -35,11 +40,12 @@ public class dunno extends JPanel implements Runnable{
 		if(objectDefine) {			
 			g.setColor(Color.orange);
 			g.fillRect(floor.x, floor.y, floor.width, floor.height);
+			System.out.println("Object define is true");
 		}
 	}
 	public void fpsSetter() {
 		try{
-			game.sleep(fps/1000);
+			Thread.sleep(fps/1000);
 		}catch(Exception e){	
 			e.printStackTrace();
 		}
