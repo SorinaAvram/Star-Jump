@@ -13,8 +13,12 @@ public class dunno extends JPanel implements Runnable{
 	private static final long serialVersionUID = 1L;
 
 	public Rectangle floor;
+		
 	
-	public int floorheight= 40;
+
+	public Color floorColor = new Color(122,52,52);
+	
+	public int floorheight= 60;
 	public int fps = 1000;
 	public boolean objectDefine = false;
 	public Thread game;
@@ -27,7 +31,7 @@ public class dunno extends JPanel implements Runnable{
 		game.start();
 	}
 	void defineObjects() { 
-		floor = new Rectangle (-10, FirstImportantClass.height-floorheight, FirstImportantClass.width+10, floorheight);
+		floor = new Rectangle (0, FirstImportantClass.height - floorheight, FirstImportantClass.width, floorheight);
 		
 		objectDefine = true;
 		
@@ -35,10 +39,9 @@ public class dunno extends JPanel implements Runnable{
 	}
 	
 	public void paint(Graphics g) {
-		super.paint(g);
-		
+		super.paint(g);	
 		if(objectDefine) {			
-			g.setColor(Color.orange);
+			g.setColor(floorColor);
 			g.fillRect(floor.x, floor.y, floor.width, floor.height);
 			System.out.println("Object define is true");
 		}
