@@ -2,7 +2,7 @@ package com.StarJump;
 
 import java.awt.GridLayout;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 
 public class Display extends JFrame {
@@ -15,8 +15,10 @@ public class Display extends JFrame {
 	public Board panel;
 	
 	public Display() {
+		panel = new Board(this);
 		 
 		setLayout(new GridLayout(1, 1, 0, 0));
 		add (panel);
+		
 	}
 }

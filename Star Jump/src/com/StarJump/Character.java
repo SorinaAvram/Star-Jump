@@ -1,21 +1,23 @@
 package com.StarJump;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
+
 import javax.swing.*;
 
 public class Character {
-int x, dx, y;
+int x, dy, y;
 
 Image still;
-
+ImageIcon i = new ImageIcon("D:/Poze/25.png");
 	public Character (){
-	ImageIcon i = new ImageIcon("D:/Poze/25.png");
-	still = i.getImage();
+	
+	still = i.getImage();	
 	x = 10;
     y = 172;
 }
 	public void move() {
-		x = x + dx;
+		x = x + dy;
 }
 	public int getX(){
 		return x;
@@ -26,6 +28,12 @@ Image still;
 	public Image getImage(){
 		return still;
 }
-
+	public void keyPressed(KeyEvent e){
+		int key = e.getKeyCode();
+		
+		if (key == KeyEvent.VK_UP)
+			dy = -1;
+	
+	}
 
 	}

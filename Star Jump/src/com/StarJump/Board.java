@@ -44,35 +44,25 @@ setBackground (Color.cyan);
 		objectDefine = true;
 		
 		repaint();
-		public void paint(Graphics g) {
-			super.paint(g);	
-			if(objectDefine) {			
-				g.setColor(floorColor);
-				g.fillRect(floor.x, floor.y, floor.width, 
-
-	floor.height);				
+					
 		}
-	}
-		
-}
+	public void paint(Graphics g) {
+		super.paint(g);	
+		if(objectDefine) {			
+			g.setColor(floorColor);
+			g.fillRect(floor.x, floor.y, floor.width, 
+
+floor.height);	
+	}	
+}		
+
 	
 	public void actionPerformed(ActionEvent e) {
 		repaint();
 	}
-	public void paint(Graphics g) {
-		super.paint(g);
-			Graphics g2d = (Graphics2D) g;
-		
-	}
 	
 	
-	private class ActionListener extends KeyAdapter {
-		public void KeyReleased (KeyEvent e){
-			
-		}
-		public void KeyPressed (KeyEvent e){
-			
-		}
-	}
+	
+	
 }
 
