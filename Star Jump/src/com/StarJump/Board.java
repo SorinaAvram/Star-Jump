@@ -11,13 +11,13 @@ public class Board extends JPanel implements ActionListener{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-Board dude;
+Character dude;
 Image img ;
 Timer time;
 Rectangle floor; 
 
 	public Board() {
-		dude = new Board();
+		dude = new Character();
 		setFocusable(true);
 		ImageIcon i = new ImageIcon("D:/Poze/bakcround.png") ;
 		img = i.getImage();
@@ -60,9 +60,13 @@ floor.height);
 	public void actionPerformed(ActionEvent e) {
 		repaint();
 	}
-	
-	
-	
-	
+	public class ActionListener extends KeyAdapter {
+		public void keyReleased (KeyEvent e){
+			
+		}
+		public void keyPressed (KeyEvent e){
+			
+		}
+	}
 }
 

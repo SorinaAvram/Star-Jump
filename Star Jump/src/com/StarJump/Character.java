@@ -6,18 +6,18 @@ import java.awt.event.KeyEvent;
 import javax.swing.*;
 
 public class Character {
-int x, dy, y;
-
+int x, dy, y, dx;
 Image still;
 ImageIcon i = new ImageIcon("D:/Poze/25.png");
+ImageIcon j = new ImageIcon("D:/Poze/jump.png");
 	public Character (){
 	
 	still = i.getImage();	
 	x = 10;
-    y = 172;
+    y = 300;
 }
 	public void move() {
-		x = x + dy;
+		x = dx * dy;
 }
 	public int getX(){
 		return x;
@@ -30,10 +30,10 @@ ImageIcon i = new ImageIcon("D:/Poze/25.png");
 }
 	public void keyPressed(KeyEvent e){
 		int key = e.getKeyCode();
-		
-		if (key == KeyEvent.VK_UP)
-			dy = -1;
-	
 	}
-
+	public void keyReleased(KeyEvent e) {
+	if (key == KeyEvent.VK_LEFT){
+		dy = 1;
+		still = j.getImage();
+	}
 	}
