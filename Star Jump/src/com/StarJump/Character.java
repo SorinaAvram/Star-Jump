@@ -6,10 +6,11 @@ import java.awt.event.KeyEvent;
 import javax.swing.*;
 
 public class Character {
+	
 int x, dy, y, dx;
 Image still;
+
 ImageIcon i = new ImageIcon("D:/Poze/25.png");
-ImageIcon j = new ImageIcon("D:/Poze/jump.png");
 	public Character (){
 	
 	still = i.getImage();	
@@ -29,11 +30,8 @@ ImageIcon j = new ImageIcon("D:/Poze/jump.png");
 		return still;
 }
 	public void keyPressed(KeyEvent e){
-		int key = e.getKeyCode();
 	}
 	public void keyReleased(KeyEvent e) {
-	if (key == KeyEvent.VK_LEFT){
-		dy = 1;
-		still = j.getImage();
+	
 	}
-	}
+}
