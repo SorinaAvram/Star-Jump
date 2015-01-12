@@ -22,9 +22,9 @@ Rectangle floor;
 	public Board() {
 		dude = new Character();
 		setFocusable(true);
-		ImageIcon i = new ImageIcon("D:/Poze/backround.png");
+		ImageIcon i = new ImageIcon("backround.png");
 		img = i.getImage();
-		
+				
 		
 		time = new Timer(5, this);
 		time.start();
@@ -32,16 +32,14 @@ Rectangle floor;
 				
 		defineObjects();
 		 	}
-		public Color floorColor = new Color(122,52,52);
-			 	
-		public int floorheight= 60;
-		public int fps = 1000;
-		public boolean objectDefine = false;
-		public Thread game;
-		public Board(Display f){
-				
-		setBackground (Color.cyan);
-			
+	public Color floorColor = new Color(122,52,52);
+ 	
+	public int floorheight= 60;
+	public int fps = 1000;
+	public boolean objectDefine = false;
+	public Thread game;
+	public Board(Display f){			
+		
 				
 		defineObjects();		
 		game.start();
@@ -50,7 +48,7 @@ Rectangle floor;
 
 		
 		
-	private void defineObjects() { 
+	void defineObjects() { 
 				floor = new Rectangle (0, FirstImportantClass.height - floorheight, FirstImportantClass.width, floorheight);
 				
 		 		

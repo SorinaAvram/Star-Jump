@@ -10,7 +10,7 @@ public class Character {
 int x, dy, y, dx;
 Image still;
 
-ImageIcon i = new ImageIcon("D:/Poze/25.png");
+ImageIcon i = new ImageIcon("25.png");
 	public Character (){
 	
 	still = i.getImage();	
