@@ -21,10 +21,10 @@ Rectangle floor;
 	
 	public Board() {
 		dude = new Character();
+		addKeyListener(new AL());
 		setFocusable(true);
 		ImageIcon i = new ImageIcon("backround.png");
-		img = i.getImage();
-				
+		img = i.getImage();		
 		
 		time = new Timer(5, this);
 		time.start();
@@ -39,7 +39,8 @@ Rectangle floor;
 	public boolean objectDefine = false;
 	public Thread game;
 	public Board(Display f){			
-		
+	
+
 				
 		defineObjects();		
 		game.start();
@@ -58,6 +59,9 @@ Rectangle floor;
 		 				}
 	public void paint(Graphics g) {
 		 		super.paint(g);	
+		 		g.drawImage(img, 0, 0, null);
+		 		g.drawImage(dude.getImage(), dude.getX(), dude.getY(), null);	 		
+		 		
 		 		if(objectDefine) {			
 		 		g.setColor(floorColor);
 		 		g.fillRect(floor.x, floor.y, floor.width,floor.height);
@@ -67,6 +71,15 @@ Rectangle floor;
 
 		 			
 	public void actionPerformed(ActionEvent e) {
+				dude.move();
 		 		repaint();
-	 } 		 	
+	 }
+	private class AL extends KeyAdapter {
+		public void keyReleased (KeyEvent e){	
+			dude.keyReleased(e);
+		}
+		public void keyPressed (KeyEvent e){
+			dude.keyPressed(e);
+		}
+	}
 }

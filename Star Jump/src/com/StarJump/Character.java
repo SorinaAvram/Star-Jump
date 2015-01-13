@@ -15,10 +15,10 @@ ImageIcon i = new ImageIcon("25.png");
 	
 	still = i.getImage();	
 	x = 10;
-    y = 300;
+    y = 180;
 }
 	public void move() {
-		x = dx * dy;
+		x = x + dx ;
 }
 	public int getX(){
 		return x;
@@ -30,8 +30,19 @@ ImageIcon i = new ImageIcon("25.png");
 		return still;
 }
 	public void keyPressed(KeyEvent e){
+		int key = e.getKeyCode();
+		if (key == KeyEvent.VK_LEFT);
+		dx = -1;
+		
+		if (key == KeyEvent.VK_RIGHT);
+		dx = 1;
 	}
 	public void keyReleased(KeyEvent e) {
-	
+		int key = e.getKeyCode();
+		if (key == KeyEvent.VK_LEFT);
+		dx = 0;
+		
+		if (key == KeyEvent.VK_RIGHT);
+		dx = 0;
 	}
 }
