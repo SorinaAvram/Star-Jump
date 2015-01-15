@@ -58,14 +58,13 @@ Rectangle floor;
 		 						
 		 				}
 	public void paint(Graphics g) {
-		 		super.paint(g);	
-		 		g.drawImage(img, 0, 0, null);
-		 		g.drawImage(dude.getImage(), dude.getX(), dude.getY(), null);	 		
+		 		super.paint(g);			 		
 		 		
 		 		if(objectDefine) {			
 		 		g.setColor(floorColor);
 		 		g.fillRect(floor.x, floor.y, floor.width,floor.height);
-		 			
+		 		g.drawImage(img, 0, 0, this);
+		 		g.drawImage(dude.getImage(), dude.getX(), dude.getY(), this);	 		
 	}	
 }		
 

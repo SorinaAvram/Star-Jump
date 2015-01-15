@@ -52,9 +52,9 @@ import javax.swing.JPanel;
 			}
 		});
 		panel.add(playButton);
+					
 		
-		
-	
+			
 		JButton highscoreButton = new JButton("Highscore");
 		highscoreButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 		highscoreButton.addActionListener(new ActionListener() {
@@ -65,6 +65,8 @@ import javax.swing.JPanel;
 			}
 		});
 		panel.add(highscoreButton);
+		
+	
 		
 		JButton instructionsButton = new JButton("Instructions");
 		instructionsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -99,11 +101,12 @@ import javax.swing.JPanel;
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setLocationRelativeTo(null);
 		
-		System.out.println("hello");
+		System.out.println("helloP");
 	}
 	
 	public static void showHighscoreFrame() {
-		Display f = new Display();
+		
+		Display f = new Display();	
 		
 		f.setSize(WIDTH, HEIGHT);
 		f.setResizable(false);
@@ -112,7 +115,7 @@ import javax.swing.JPanel;
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setLocationRelativeTo(null);
 		
-		System.out.println("hello");	
+		System.out.println("helloH");	
 	}
 	public static void showInstructionsFrame() {
 		Display f = new Display();				
@@ -124,7 +127,7 @@ import javax.swing.JPanel;
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setLocationRelativeTo(null);
 				
-		System.out.println("hello");
+		System.out.println("helloI");
 	}
  }	
  
