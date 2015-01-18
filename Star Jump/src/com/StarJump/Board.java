@@ -17,7 +17,7 @@ Character dude;
 Image img ;
 Timer time;
 Rectangle floor; 
-int val = 172;
+int val = 290;
 Thread animator;
 
 	
@@ -74,9 +74,8 @@ Thread animator;
 		 		g.setColor(floorColor);
 		 		g.fillRect(floor.x, floor.y, floor.width,floor.height);
 		 		g.drawImage(img, 0, 0, this);
-		 		g.drawImage(dude.getImage(), dude.getX(), dude.getY(), this);	
-		 		
-	}	
+		 		g.drawImage(dude.getImage(), dude.getX(), val, this);	
+		 			}	
 }		
 
 		 			
@@ -118,12 +117,11 @@ Thread animator;
 	public void cycle() {
 		if (peak == false)
 			val --; 
-		if(val ==125)
+		if(val ==240)
 			peak=true;
-		if(peak == true && val <=260)
+		if(peak == true && val <=290)
 			val++;
-		if (val==260)
+		if (val==290)
 			done=true;
 }
-
 }
