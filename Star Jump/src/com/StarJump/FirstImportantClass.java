@@ -2,6 +2,7 @@ package com.StarJump;
 
 
 import java.awt.Component;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -67,6 +68,9 @@ import javax.swing.JPanel;
 		panel.add(highscoreButton);
 		
 	
+		JPanel panelInstr = new JPanel();
+		panelInstr.setLayout(new GridLayout(1, 1, 0, 0));
+		
 		
 		JButton instructionsButton = new JButton("Instructions");
 		instructionsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -104,9 +108,11 @@ import javax.swing.JPanel;
 		System.out.println("helloP");
 	}
 	
-	public static void showHighscoreFrame() {
+	public static void showHighscoreFrame() {			
+		JFrame f = new JFrame();
 		
-		Display f = new Display();	
+		JPanel panelH= new JPanel();
+		panelH.setLayout(new BoxLayout(panelH, BoxLayout.Y_AXIS));
 		
 		f.setSize(WIDTH, HEIGHT);
 		f.setResizable(false);
@@ -116,9 +122,14 @@ import javax.swing.JPanel;
 		f.setLocationRelativeTo(null);
 		
 		System.out.println("helloH");	
+		
+		
 	}
 	public static void showInstructionsFrame() {
-		Display f = new Display();				
+		JFrame f = new JFrame();
+			
+		JPanel panelI = new JPanel();
+		panelI.setLayout(new BoxLayout(panelI, BoxLayout.Y_AXIS));			
 				
 		f.setSize(WIDTH, HEIGHT);
 		f.setResizable(false);

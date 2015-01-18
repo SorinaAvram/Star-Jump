@@ -10,12 +10,12 @@ public class Character {
 int x, dy, y, dx;
 Image still;
 
-ImageIcon i = new ImageIcon("25.png");
+ImageIcon i = new ImageIcon("D://Poze/25.png");
 	public Character (){
 	
 	still = i.getImage();	
-	x = 10;
-    y = 180;
+	x = 260;
+    y = 260;
 }
 	public void move() {
 		x = x + dx ;
@@ -31,18 +31,33 @@ ImageIcon i = new ImageIcon("25.png");
 }
 	public void keyPressed(KeyEvent e){
 		int key = e.getKeyCode();
-		if (key == KeyEvent.VK_LEFT);
+		if (key == KeyEvent.VK_LEFT){
 		dx = -1;
-		
-		if (key == KeyEvent.VK_RIGHT);
+		still = i.getImage();
+	}
+		if (key == KeyEvent.VK_RIGHT){
 		dx = 1;
+		still = i.getImage();
+	}
+		
+		if(key == KeyEvent.VK_UP){
+			dy =1;
+		still = i.getImage();
+		}
 	}
 	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
-		if (key == KeyEvent.VK_LEFT);
+		if (key == KeyEvent.VK_LEFT){
 		dx = 0;
 		
-		if (key == KeyEvent.VK_RIGHT);
+		}
+		if (key == KeyEvent.VK_RIGHT){
 		dx = 0;
+		}
+		if(key == KeyEvent.VK_UP){
+		dy =0;
+		still = i.getImage();
+		
+		}
 	}
 }
