@@ -19,11 +19,11 @@ Timer time;
 Rectangle floor; 
 int val = 290;
 Thread animator;
-
+Bricks b1;
 	
 	public Board() {
 		dude = new Character();
-				
+		b1 = new Bricks();	
 		addKeyListener(new AL());
 		setFocusable(true);
 		ImageIcon i = new ImageIcon("D://Poze/backround.png");		
@@ -74,7 +74,8 @@ Thread animator;
 		 		g.setColor(floorColor);
 		 		g.fillRect(floor.x, floor.y, floor.width,floor.height);
 		 		g.drawImage(img, 0, 0, this);
-		 		g.drawImage(dude.getImage(), dude.getX(), val, this);	
+		 		g.drawImage(dude.getImage(), dude.getX(), val, this);
+		 		g.drawImage(b1.imgb, 250, 220, this);
 		 			}	
 }		
 

@@ -8,11 +8,13 @@ public class Bricks   {
 	
 	Image imgb;
 	int x,  y;
+	boolean full = true;
+	
 	ImageIcon l = new ImageIcon("D://Poze/Bricks04.png");
-	public  Bricks(int x, int y) {
+	public  Bricks() {
 		
-	    this.x = x;
-	    this.y = y;		
+	    x = 250;
+	    y = 220;		
 		imgb = l.getImage();	
 	}
 }
