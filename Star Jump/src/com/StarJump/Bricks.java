@@ -5,15 +5,13 @@ import javax.swing.*;
 
 public class Bricks   {
 	
-	Image imgb;
-	int x,  y;
+	Image imgb;	
 	boolean breaks;	
 	ImageIcon l = new ImageIcon("D://Poze/Bricks04.png");
-	public  Bricks(int x, int y) {
+	public  Bricks() {
 		
-		x = 250;
-		y = 220;
-		imgb = l.getImage();
+		
+	imgb = l.getImage();
 		
 	breaks = false;
 	   

@@ -23,7 +23,7 @@ Bricks b1;
 	
 	public Board() {
 		dude = new Character();
-		b1 = new Bricks(250, 220);	
+		b1 = new Bricks();	
 		addKeyListener(new AL());
 		setFocusable(true);
 		ImageIcon i = new ImageIcon("D://Poze/backround.png");		
@@ -75,7 +75,7 @@ Bricks b1;
 		 		g.fillRect(floor.x, floor.y, floor.width,floor.height);
 		 		g.drawImage(img, 0, 0, this);
 		 		g.drawImage(dude.getImage(), dude.getX(), val, this);
-		 		g.drawImage(b1.imgb, b1.x, b1.y, this);
+		 		g.drawImage(b1.imgb, 250, 220, this);
 		 			}	
 }		
 
