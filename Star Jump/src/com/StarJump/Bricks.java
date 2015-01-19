@@ -11,9 +11,10 @@ public class Bricks   {
 	ImageIcon l = new ImageIcon("D://Poze/Bricks04.png");
 	public  Bricks(int x, int y) {
 		
-		this.x = x;
-	    this.y = y;		
+		x = 250;
+		y = 220;
 		imgb = l.getImage();
+		
 	breaks = false;
 	   
 	}	
