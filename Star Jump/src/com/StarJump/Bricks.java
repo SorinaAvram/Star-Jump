@@ -7,9 +7,10 @@ public class Bricks   {
 	
 	Image imgb;	
 	boolean breaks;	
-	ImageIcon l = new ImageIcon("D://Poze/Bricks04.png");
+	ImageIcon l = new ImageIcon("D://Poze/Brick04.png");
 	public  Bricks() {
 		
+	 
 		
 	imgb = l.getImage();
 		
@@ -22,4 +23,8 @@ public class Bricks   {
 	public void setBreaks (boolean breaks){
 		this.breaks =breaks;
 	}
+	public Rectangle getBounds() {
+		return new Rectangle(70 , 25 );
+	}
 }
+

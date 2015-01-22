@@ -61,4 +61,8 @@ ImageIcon j = new ImageIcon("D://Poze/jump.png");
 		
 		}
 	}
+	public Rectangle getBounds() {
+		return new Rectangle(74 ,72);
+	}
+		
 }

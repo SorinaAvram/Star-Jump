@@ -57,9 +57,11 @@ Bricks b1;
 				
 		 		
 		 		objectDefine = true;
-		 		repaint();
+		 		repaint();		 
 		 						
-		 				}
+}
+	
+	
 	boolean k=false;
 	public void paint(Graphics g) {
 				if (dude.dy ==1 && k==false){
@@ -75,15 +77,27 @@ Bricks b1;
 		 		g.fillRect(floor.x, floor.y, floor.width,floor.height);
 		 		g.drawImage(img, 0, 0, this);
 		 		g.drawImage(dude.getImage(), dude.getX(), val, this);
-		 		g.drawImage(b1.imgb, 250, 220, this);
+		 		g.drawImage(b1.imgb, 180, 290, this);
 		 			}	
 }		
 
 		 			
 	public void actionPerformed(ActionEvent e) {
+				checkCollision();
 				dude.move();
 		 		repaint();
 	 }
+	
+	public void checkCollision() {
+	Rectangle r1 = b1.getBounds();
+	Rectangle r2 = dude.getBounds();
+	if (r2.intersects(r1) && b1.notBreaks()){
+		b1.breaks = false;		
+	}
+	
+	}	
+	
+	
 	private class AL extends KeyAdapter {
 		public void keyReleased (KeyEvent e){	
 			dude.keyReleased(e);
@@ -118,11 +132,12 @@ Bricks b1;
 	public void cycle() {
 		if (peak == false)
 			val --; 
-		if(val ==240)
+		if(val ==210)
 			peak=true;
 		if(peak == true && val <=290)
 			val++;
 		if (val==290)
 			done=true;
 }
+	
 }
