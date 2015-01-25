@@ -14,8 +14,8 @@ int height = 72;
 int halfW, halfH;
 Rectangle bounds;
 
-ImageIcon i1 = new ImageIcon("D://Poze/25.png");
-ImageIcon j = new ImageIcon("D://Poze/jump.png");
+ImageIcon i1 = new ImageIcon("25.png");
+ImageIcon j = new ImageIcon("jump.png");
 
 	public Character (){
 	

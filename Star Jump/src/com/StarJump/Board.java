@@ -26,7 +26,7 @@ Bricks b1;
 		b1 = new Bricks(180,290);	
 		addKeyListener(new AL());
 		setFocusable(true);
-		ImageIcon i = new ImageIcon("D://Poze/backround.png");		
+		ImageIcon i = new ImageIcon("backround.png");		
 		img = i.getImage();		
 		
 		time = new Timer(5, this);
@@ -92,8 +92,7 @@ Bricks b1;
 	Rectangle r1 = b1.getBounds();
 	Rectangle r2 = dude.getBounds();
 	if (r2.intersects(r1) && b1.notBreaks()){
-		b1.breaks = false;
-	
+		b1.breaks = false;	
 	System.out.println("Okay");
 	}
 	

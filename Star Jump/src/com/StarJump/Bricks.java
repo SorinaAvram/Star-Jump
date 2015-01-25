@@ -7,7 +7,7 @@ public class Bricks   {
 	
 	Image imgb;	
 	boolean breaks;	
-	ImageIcon l = new ImageIcon("D://Poze/Brick04.png");
+	ImageIcon l = new ImageIcon("Brick04.png");
 	int width = 70;
 	int height = 25;
 	int xPos,yPos;
