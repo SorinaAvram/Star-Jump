@@ -20,7 +20,8 @@ Rectangle floor;
 int val = 290;
 Thread animator;
 Bricks b1;
-	
+boolean lost = false;
+
 	public Board() {
 		dude = new Character();
 		b1 = new Bricks(180,290);	
@@ -88,12 +89,19 @@ Bricks b1;
 		 		repaint();
 	 }
 	
-	public void checkCollision() {
+	public void checkCollision() {	 
 	Rectangle r1 = b1.getBounds();
 	Rectangle r2 = dude.getBounds();
 	if (r2.intersects(r1) && b1.notBreaks()){
-		b1.breaks = false;	
+		b1.breaks = false ;	
+		done = true;
+	if (r2.intersects(r1)&& b1.breaks){	
+		b1.breaks = true; 
+		lost = true; 
+		
+	}
 	System.out.println("Okay");
+	
 	}
 	
 	}	
