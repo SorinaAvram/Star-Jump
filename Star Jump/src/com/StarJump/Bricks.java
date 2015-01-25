@@ -22,6 +22,8 @@ public class Bricks   {
 		int hW = width / 2;
 		int hH = height / 2;
 		
+		imgb = l.getImage();
+		
 	bounds = new Rectangle(xPos - hW, yPos + hH, width, height);	
 	
 		
@@ -46,8 +48,8 @@ public class Bricks   {
 	public void setBreaks (boolean breaks){
 		this.breaks =breaks;
 	}
-	public Rectangle getBounds()
-	{
+	public Rectangle getBounds(){
+	
 		return bounds;
 	}
 		
