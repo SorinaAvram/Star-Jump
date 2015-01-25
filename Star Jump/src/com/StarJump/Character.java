@@ -9,14 +9,25 @@ public class Character {
 	
 int x, dy, y, dx;
 Image still;
+int width = 74;
+int height = 72;
+int halfW, halfH;
+Rectangle bounds;
 
 ImageIcon i1 = new ImageIcon("D://Poze/25.png");
 ImageIcon j = new ImageIcon("D://Poze/jump.png");
+
 	public Character (){
 	
 	still = i1.getImage();	
 	x = 260;
     y = 290;
+    
+    halfW = width / 2;
+	halfH = height / 2;
+	
+	bounds = new Rectangle(width, height);
+	
 }
 	public void move() {
 		x = x + dx ;
@@ -60,9 +71,11 @@ ImageIcon j = new ImageIcon("D://Poze/jump.png");
 		still = i1.getImage();
 		
 		}
+		
 	}
 	public Rectangle getBounds() {
-		return new Rectangle(74 ,72);
+	bounds.setLocation(x - halfW, y + halfH);		
+		return bounds;
 	}
 		
 }
