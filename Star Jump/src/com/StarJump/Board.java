@@ -87,10 +87,10 @@ public class Board extends JPanel implements ActionListener, Runnable {
 
 		Rectangle r1 = b1.getBounds();
 		Rectangle r2 = dude.getBounds();
-
+		 
 		if (r2.intersects(r1) && b1.notBreaks()) {
 			b1.breaks = false;
-
+			System.out.println(""+val+" hello ");
 		}
 
 	}
