@@ -78,7 +78,7 @@ public class Board extends JPanel implements ActionListener, Runnable {
 		}
 	}
 
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) {		
 		dude.move();
 		repaint();
 	}
@@ -113,6 +113,7 @@ public class Board extends JPanel implements ActionListener, Runnable {
 		while (done == false) {
 			cycle();
 			checkCollision();
+			
 			timeDiff = System.currentTimeMillis() - beforeTime;
 			sleep = 10 - timeDiff;
 			if (sleep < 0)
@@ -138,11 +139,13 @@ public class Board extends JPanel implements ActionListener, Runnable {
 		if (peak == false)
 			val--;
 			dude.y=val;
+			dude.y--;
 		if (val == 210)
 			peak = true;
 		if (peak == true && val <= 290)
 			val++;
 			dude.y=val;
+			dude.y--;
 		if (val == 290)
 			done = true;
 	}
