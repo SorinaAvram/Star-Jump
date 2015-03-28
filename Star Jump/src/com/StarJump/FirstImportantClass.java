@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
  
@@ -127,17 +128,22 @@ import javax.swing.JPanel;
 	}
 	public static void showInstructionsFrame() {
 		JFrame f = new JFrame();
-			
-		JPanel panelI = new JPanel();
-		panelI.setLayout(new BoxLayout(panelI, BoxLayout.Y_AXIS));			
-				
+		
+		JPanel panelI = new JPanel();		
+		panelI.setLayout(new BoxLayout(panelI, BoxLayout.Y_AXIS));
+		
+		JLabel lab1 = new JLabel();
+		lab1.setText("To go left you press the left arrow key fkjwefiowerugjisdqJFJWEIUFGJEWIFJDIOFJSDIFJWIOFGWJIFUWHJFIDJVV");
+		lab1.setVerticalTextPosition(JLabel.TOP);
 		f.setSize(WIDTH, HEIGHT);
 		f.setResizable(false);
 		f.setTitle("Star Jump - Instructions");
 		f.setVisible(true);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setLocationRelativeTo(null);
-				
+		
+		f.add(panelI); 
+		f.add(lab1);
 		System.out.println("helloI");
 	}
  }	

@@ -87,12 +87,21 @@ public class Board extends JPanel implements ActionListener, Runnable {
 
 		Rectangle r1 = b1.getBounds();
 		Rectangle r2 = dude.getBounds();
-		 
-		if (r2.intersects(r1) && b1.notBreaks()) {
+		
+		System.out.println(r2.getX()+ r2.getY() + r2.width + r2.height);
+		System.out.println(r1.getX()+ r1.getY() + r1.width + r1.height);
+		
+		if (r1.intersects(r2) && b1.notBreaks()) {
+			
 			b1.breaks = false;
-			System.out.println(""+val+" hello ");
+		if (r2.intersects(r1) ) {	
+		
+		
+			done = true;
+            dude.y = b1.getY() + b1.height;
 		}
-
+	
+	}
 	}
 
 	private class AL extends KeyAdapter {
@@ -106,6 +115,9 @@ public class Board extends JPanel implements ActionListener, Runnable {
 	}
 
 	@Override
+	
+	// Thread for jumping
+	
 	public void run() {
 		long beforeTime, timeDiff, sleep;
 
@@ -122,6 +134,7 @@ public class Board extends JPanel implements ActionListener, Runnable {
 				Thread.sleep(sleep);
 
 			} catch (Exception e) {
+				
 			}
 			beforeTime = System.currentTimeMillis();
 		}
@@ -139,13 +152,13 @@ public class Board extends JPanel implements ActionListener, Runnable {
 		if (peak == false)
 			val--;
 			dude.y=val;
-			dude.y--;
+			
 		if (val == 210)
 			peak = true;
 		if (peak == true && val <= 290)
 			val++;
 			dude.y=val;
-			dude.y--;
+			
 		if (val == 290)
 			done = true;
 	}
