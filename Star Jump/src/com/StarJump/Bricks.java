@@ -43,7 +43,7 @@ public class Bricks   {
 		return yPos;
 	}
 	public boolean notBreaks() {
-		return breaks;
+		return !breaks;
 	}
 	public void setBreaks (boolean breaks){
 		this.breaks =breaks;

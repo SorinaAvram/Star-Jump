@@ -91,17 +91,14 @@ public class Board extends JPanel implements ActionListener, Runnable {
 		System.out.println(r2.getX()+ r2.getY() + r2.width + r2.height);
 		System.out.println(r1.getX()+ r1.getY() + r1.width + r1.height);
 		
-		if (r1.intersects(r2) && b1.notBreaks()) {
-			
-			b1.breaks = false;
-		if (r2.intersects(r1) ) {	
-		
-		
+		// Gotta add && b1.notBreaks() for the bricks that will break (doh!)
+		if (r1.intersects(r2) ) {
+									
 			done = true;
-            dude.y = b1.getY() + b1.height;
-		}
-	
-	}
+            dude.y = b1.getY() + (dude.height/2);
+            
+            System.out.println("GIZZY HIT THE BRICK");
+		}	
 	}
 
 	private class AL extends KeyAdapter {
