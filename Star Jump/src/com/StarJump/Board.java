@@ -97,6 +97,9 @@ public class Board extends JPanel implements ActionListener, Runnable {
 			done = true;
             dude.y = b1.getY() + (dude.height/2);
             
+       //To fix this !! 
+            dude.x = b1.getX() + (b1.width /2);
+            
             System.out.println("GIZZY HIT THE BRICK");
 		}	
 	}
